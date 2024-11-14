@@ -20,7 +20,7 @@ exports.handler = async (event, context) => {
         const docSnapshot = await userDocRef.get();
         if (docSnapshot.exists) {
             return {
-                statusCode: 400,
+                statusCode: 201,
                 body: "User already registered.",
             };
         }
